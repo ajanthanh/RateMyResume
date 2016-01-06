@@ -15,6 +15,10 @@ class SignUpForm(forms.ModelForm):
             raise forms.ValidationError("Password must be more than 5 characters")
         if len(password) > 50:
             raise forms.ValidationError("Password must be less than 50 characters")
-
         return password
 
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        if email and SignUp.objects.filter(email=email).count():
+            raise forms.ValidationError('This email address has already been used.')
+        return email

@@ -9,7 +9,7 @@ class SignUp(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     update = models.DateTimeField(auto_now_add=False, auto_now=True)
     password = models.CharField(max_length=50, blank=False, null=True)
-    type_of_account = models.CharField()
+    type_of_account = models.CharField(max_length=50)
 
     def __str__(self):
         return self.email
