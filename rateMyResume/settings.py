@@ -51,7 +51,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'tryDjango.urls'
+ROOT_URLCONF = 'rateMyResume.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'tryDjango.wsgi.application'
+WSGI_APPLICATION = 'rateMyResume.wsgi.application'
 
 
 # Database
