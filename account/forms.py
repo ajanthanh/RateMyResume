@@ -5,7 +5,9 @@ from .models import SignUp
 class SignUpForm(forms.ModelForm):
     class Meta:
         model = SignUp
-        widgets = {'password': forms.PasswordInput()}
+        widgets = {
+            'password': forms.PasswordInput(),
+        }
         fields = ['email', 'first_name', 'last_name', 'password']
 
     def clean_password(self):
