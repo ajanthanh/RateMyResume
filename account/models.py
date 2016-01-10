@@ -2,7 +2,7 @@ from django.db import models
 
 
 # Create your models here.
-class SignUp(models.Model):
+class Account(models.Model):
     email = models.EmailField()
     first_name = models.CharField(max_length=120, blank=False, null=True)
     last_name = models.CharField(max_length=120, blank=False, null=True)

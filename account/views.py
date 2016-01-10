@@ -3,7 +3,12 @@ from .forms import SignUpForm
 
 
 # Create your views here.
+
 def home(request):
+    return render(request, "home.html")
+
+
+def signup(request):
     title = "Sign Up"
     body_content = "In just a few moments we can get you signed up, and you can upload, view and critque resumes from the community"
     # if request.user.is_authenticated():
