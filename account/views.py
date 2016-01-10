@@ -25,4 +25,4 @@ def home(request):
             "body_content": "You will be recieving an email confirmation shortly"
         }
 
-    return render(request, "home.html", context)
+    return render(request, "signup.html", context)
