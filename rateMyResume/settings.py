@@ -33,10 +33,12 @@ INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Third Party App
     'crispy_forms',
+    'registration',
     # Implemented Apps
     'account',
 )
@@ -111,4 +113,16 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_prod")
 
+# Crispy Form Tag Settings
+
 CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+# Django Registration Redux Settings
+
+ACCOUNT_ACTIVATION_DAYS = 7
+
+REGISTRATION_AUTO_LOGIN = True
+
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'

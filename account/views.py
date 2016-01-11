@@ -8,9 +8,7 @@ def home(request):
     return render(request, "home.html")
 
 
-def signup(request):
-    title = "Sign Up"
-    body_content = "In just a few moments we can get you signed up, and you can upload, view and critque resumes from the community"
+def profile(request):
 
     #     title = "My Title %s" % (request.user)
     form = SignUpForm(request.POST or None)
@@ -18,7 +16,6 @@ def signup(request):
     context = {
         "title": title,
         "form": form,
-        "body_content": body_content,
     }
 
     if form.is_valid():
@@ -27,7 +24,6 @@ def signup(request):
         print(instance)
         context = {
             "title": "Thank you",
-            "body_content": "You will be recieving an email confirmation shortly"
         }
 
     if request.user.is_authenticated():

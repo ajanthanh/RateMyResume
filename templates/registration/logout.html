@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+
+<div class='row top-padding'>
+    <div class='col-sm-3 col-sm-offset-3 center'>
+        <p class='text-align-center lead'>You have successfully logged out.</p>
+        <form action="/accounts/login">
+            <input class='btn btn-primary' type="submit" value="login">
+            <br><br>
+            <input class='btn btn-primary' type="submit" value="home">
+        </form>
+    </div>
+</div>
+{% endblock %}
