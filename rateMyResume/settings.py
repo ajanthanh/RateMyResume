@@ -26,6 +26,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'ratemyresume.noreply@gmail.com'
+EMAIL_HOST_PASSWORD = 'django123'
+DEFAULT_FROM_EMAIL = 'ratemyresume.noreply@gmail.com'
+EMAIL_PORT = 587
+
+
 # Application definition
 
 INSTALLED_APPS = (
