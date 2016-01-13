@@ -14,7 +14,7 @@ def profile(request):
     form = SignUpForm(request.POST or None, request.FILES or None)
 
     context = {
-        "title": title,
+        #"title": title,
         "form": form,
     }
 
