@@ -8,7 +8,7 @@ def home(request):
     body_content = "In just a few moments we can get you signed up, and you can upload, view and critque resumes from the community"
     # if request.user.is_authenticated():
     #     title = "My Title %s" % (request.user)
-    form = SignUpForm(request.POST or None)
+    form = SignUpForm(request.POST or None, request.FILES or None)
 
     context = {
         "title": title,

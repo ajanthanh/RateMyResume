@@ -1,5 +1,10 @@
 from django.db import models
 
+#UPLOAD FILE: This is only for following demo purposes and may need to be changed
+from time import time
+def get_upload_file_name(instance, filename):
+	return "uploaded_files/%s" % (filename)
+#UPLOAD FILE: This is only for following demo purposes and may need to be changed
 
 # Create your models here.
 class SignUp(models.Model):
@@ -9,6 +14,7 @@ class SignUp(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True, auto_now=False)
     update = models.DateTimeField(auto_now_add=False, auto_now=True)
     password = models.CharField(max_length=50, blank=False, null=True)
+    thumbnail = models.FileField(upload_to=get_upload_file_name, blank=True, null=True)
     # type_of_account = models.CharField(max_length=50)
 
     def __str__(self):

@@ -8,7 +8,7 @@ class SignUpForm(forms.ModelForm):
         widgets = {
             'password': forms.PasswordInput(),
         }
-        fields = ['email', 'first_name', 'last_name', 'password']
+        fields = ['email', 'first_name', 'last_name', 'password', 'thumbnail']
 
     def clean_password(self):
         password = self.cleaned_data.get('password')
