@@ -1,9 +1,10 @@
 from django import forms
-from .models import SignUp
+from .models import Account
 
 
 class SignUpForm(forms.ModelForm):
     class Meta:
+
         model = SignUp
         widgets = {
             'password': forms.PasswordInput(),
@@ -19,8 +20,9 @@ class SignUpForm(forms.ModelForm):
             raise forms.ValidationError("Password must be less than 50 characters")
         return password
 
+
     def clean_email(self):
         email = self.cleaned_data.get('email')
-        if email and SignUp.objects.filter(email=email).count():
+        if email and Account.objects.filter(email=email).count():
             raise forms.ValidationError('This email address has already been used.')
         return email

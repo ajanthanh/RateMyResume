@@ -4,15 +4,17 @@
 {% block head_title %} Welcome | {{ block.super }} {% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-md-4 center form">
-        <h1>{{title}}</h1>
-        <p>{{body_content}}</p>
-        <form method="POST" action="" enctype="multipart/form-data">{% csrf_token %}
-            <!--<input type="text">-->
-            {{form|crispy}}
-            <button type="submit" class="btn btn-default">Sign Up</button>
-        </form>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 center form">
+            <h1>{{title}}</h1>
+            <form method="POST" action="" enctype="multipart/form-data">{% csrf_token %}
+                <!--<input type="text">-->
+                {{form|crispy}}
+                <button type="submit" class="btn btn-default">Sign Up</button>
+            </form>
+        </div>
     </div>
 </div>
 {% endblock %}

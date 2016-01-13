@@ -5,10 +5,11 @@ from django.contrib import admin
 
 urlpatterns = [
     # Examples:
+    url(r'^signup/', 'account.views.profile', name='profile'),
     url(r'^$', 'account.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^accounts/', include('registration.backends.default.urls')),
 ]
 
 if settings.DEBUG:

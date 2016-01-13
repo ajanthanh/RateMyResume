@@ -18,13 +18,11 @@
     </head>
     <body>
         {% include 'navbar-header.html' %}
-        <!-- Static navbar -->
-        <div class="container">
 
-            {% block content %}
-            {% endblock %}
+        {% block content %}
+        {% endblock %}
 
-        </div>
+
         {% include 'navbar-footer.html' %}
         {% include 'header/js.html' %}
 
