@@ -13,7 +13,7 @@ def profile(request):
     form = SignUpForm(request.POST or None, request.FILES or None)
     title = "SignUp"
     context = {
-        "title": title,
+        #"title": title,
         "form": form,
     }
 
