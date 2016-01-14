@@ -1,26 +1,18 @@
 from django.shortcuts import render
-from .forms import SignUpForm
+from .forms import ResumeForm
 
 
-# Create your views here.
-
-def home(request):
-    return render(request, "home.html")
-
-
-def profile(request):
+def upload(request):
     #     title = "My Title %s" % (request.user)
-    form = SignUpForm(request.POST or None, request.FILES or None)
-    title = "SignUp"
+    form = ResumeForm(request.POST or None, request.FILES or None)
+
     context = {
-        "title": title,
         "form": form,
     }
 
     if form.is_valid():
         instance = form.save(commit=False)
         instance.save()
-        print(instance)
         context = {
             "title": "Thank you",
         }
@@ -28,4 +20,4 @@ def profile(request):
     if request.user.is_authenticated():
         context.update({"user": request.user})
 
-    return render(request, "signup.html", context)
+    return render(request, "resume_upload.html", context)

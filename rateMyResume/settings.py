@@ -49,6 +49,7 @@ INSTALLED_APPS = (
     'registration',
     # Implemented Apps
     'account',
+    'resume',
 )
 
 MIDDLEWARE_CLASSES = (
