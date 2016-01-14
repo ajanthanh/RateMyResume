@@ -5,7 +5,7 @@ from .models import Resume
 
 
 class ResumeAdmin(admin.ModelAdmin):
-    # list_display = ["__str__", "timestamp"]
+    list_display = ["id", "file_name"]
     form = ResumeForm
 
     class Meta:

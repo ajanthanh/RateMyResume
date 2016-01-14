@@ -7,7 +7,7 @@ urlpatterns = [
     # Examples:
     url(r'^signup/', 'account.views.profile', name='profile'),
     url(r'^$', 'account.views.home', name='home'),
-    url(r'^resume/upload', 'resume.views.upload', name='upload'),
+    url(r'^resume/', include('resume.urls')),
 
     # url(r'^blog/', include('blog.urls')),
     url(r'^admin/', include(admin.site.urls)),

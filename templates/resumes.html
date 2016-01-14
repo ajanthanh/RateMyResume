@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% block head_title %} Resumes | {{ block.super }} {% endblock %}
+
+{% block content %}
+
+<h1>Resumes</h1>
+{% for resume in resumes %}
+<div>
+<h2><a href="/resume/get/{{resume.id}}/">{{resume.file_name}}</a></h2>
+<img src='/media/{{resume.thumbnail}}' width=200px>
+</div>
+{% endfor %}
+
+{% endblock %}
